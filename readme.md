@@ -1,1 +1,1 @@
-# Athenticate via the Harvest API
+# Authenticate via the Harvest API
