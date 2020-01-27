@@ -20,4 +20,4 @@ app.use(harvestAuth({
 ));
 
 app.listen(port);
-console.log('Farmhand API is listening on port ' + port);
+console.log('Express is listening on port ' + port);
