@@ -1,6 +1,6 @@
 {
   "name": "harvest-auth",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Authenticate via Harvest API",
   "main": "index.js",
   "scripts": {
