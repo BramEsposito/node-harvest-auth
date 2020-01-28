@@ -8,4 +8,4 @@ You need [Express](https://expressjs.com/) to use this module
 
 Install using npm: "npm i harvest-auth"
 
-Take a look at at the [example implementation]("https://github.com/BramEsposito/node-harvest-auth/blob/master/examples/existing-express.js")
+Take a look at at the [example implementation](https://github.com/BramEsposito/node-harvest-auth/blob/master/examples/existing-express.js)
