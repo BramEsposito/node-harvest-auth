@@ -3,13 +3,22 @@ Authenticate on the v2 version of the Harvest API
  */
 const express           = require('express');
 const session           = require('express-session');
+var FileStore           = require('session-file-store')(session);
 const grant             = require('grant-express');
 const request           = require('request');
 
 module.exports = function(data,callback) {
     const app = express();
+    
+    var fileStoreOptions = {};
 
-    app.use(session({secret: data.APP_SECRET, saveUninitialized: true, resave: true}));
+    app.use(session({
+        store: new FileStore(fileStoreOptions),
+        secret: data.APP_SECRET, 
+        saveUninitialized: true, 
+        resave: true
+    }));
+
     app.use(grant({
         defaults: {
             protocol: data.PROTOCOL,
@@ -43,7 +52,7 @@ module.exports = function(data,callback) {
                 return console.log(qerr);
             }
 
-            callback(res, {tokens: req.query, accounts: qbody});
+            callback(req, res, {tokens: req.query, accounts: qbody});
         });
     });
 

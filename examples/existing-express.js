@@ -12,7 +12,7 @@ app.use(harvestAuth({
     CLIENT_ID: 'FILL IN HERE',
     CLIENT_SECRET: 'FILL IN HERE'
     },
-    function(res, data) {
+    function(req, res, data) {
         // callback after authentication
         console.log(data);
         res.send(JSON.stringify(data, null, 2));
